@@ -182,43 +182,39 @@
           <input type="text" name="email" style="width: 100%; margin-right: 10px;"
           class="form-control" id="email">
           <table>
-            <tr> 
-                <th> 
-                <label for="contact1" class="form-label" style="width: 100%; margin-right: 10px;">
-            <b>
-              Contact Number - 1
-            </b>
-            <sup style="color: red">
-              *
-            </sup>
-          </label>
-                 </th>
-
-                 <th>
-                 <label for="contact2" class="form-label" style="width: 100%; margin-right: 10px;">
-            <b>
-              Contact Number - 2
-            </b>
-            <sup style="color: red">
-              *
-            </sup>
-          </label>
-                </th>
-            </tr>
-
             <tr>
-                <td>
-            <input type="text" name="contact1" style="width: 100%; margin-right: 10px;"
-          class="form-control" id="contact1">
-            </td>
-            <td>
-          <input type="text" name="contact2" style="width: 100%; margin-right: 10px;"
-          class="form-control" id="contact2">
-            </td>
+              <th>
+                <label for="contact1" class="form-label" style="width: 100%; margin-right: 10px;">
+                  <b>
+                    Contact Number - 1
+                  </b>
+                  <sup style="color: red">
+                    *
+                  </sup>
+                </label>
+              </th>
+              <th>
+                <label for="contact2" class="form-label" style="width: 100%; margin-right: 10px;">
+                  <b>
+                    Contact Number - 2
+                  </b>
+                  <sup style="color: red">
+                    *
+                  </sup>
+                </label>
+              </th>
             </tr>
-         
-          
-        </table>
+            <tr>
+              <td>
+                <input type="text" name="contact1" style="width: 100%; margin-right: 10px;"
+                class="form-control" id="contact1">
+              </td>
+              <td>
+                <input type="text" name="contact2" style="width: 100%; margin-right: 10px;"
+                class="form-control" id="contact2">
+              </td>
+            </tr>
+          </table>
         </div>
         <div class="mb-3">
           <label for="examname" class="form-label" style="width: 100%; margin-right: 10px;">
@@ -505,4 +501,5 @@
         </button>
       </form>
   </body>
+
 </html>
