@@ -39,8 +39,10 @@
               in block letters as in SSLC
             </span>
             )
+            
           </label>
           <input type="text" name="name" class="form-control" id="name">
+          @error('name') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <div class="mb-3">
           <label for="gender" class="form-label" style="width: 100%; margin-right: 10px;">
@@ -79,6 +81,7 @@
           </label>
           <input type="date" name="dob" class="form-control" style="width: 100%; margin-right: 10px;"
           id="dob">
+          @error('dob') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <div class="mb-3">
           <label for="religion" class="form-label" style="width: 100%; margin-right: 10px;">
@@ -116,6 +119,7 @@
                 Pakistan
               </option>
             </select>
+            @error('nationality') <p class="alert mt-2">{{ $message }}</p> @enderror
           </div>
           <label for="guardian" class="form-label" style="width: 100%; margin-right: 10px;">
             <b>
@@ -132,6 +136,7 @@
           </label>
           <input type="text" name="guardian" style="width: 100%; margin-right: 10px;"
           class="form-control" id="guardian">
+          @error('guardian') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <div class="mb-3">
           <label for="comaddress" class="form-label" style="width: 100%; margin-right: 10px;">
@@ -149,6 +154,7 @@
           </label>
           <input type="text" name="comaddress" style="width: 100%; margin-right: 10px;"
           class="form-control" id="comaddress">
+          @error('comaddress') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label for="permaddress" class="form-label" style="width: 100%; margin-right: 10px;">
             <b>
               Permanent Address with pin code
@@ -164,6 +170,7 @@
           </label>
           <input type="text" name="permaddress" class="form-control" style="width: 100%; margin-right: 10px;"
           id="permaddress">
+          @error('permaddress') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <div class="mb-3">
           <label for="email" class="form-label" style="width: 100%; margin-right: 10px;">
@@ -181,6 +188,7 @@
           </label>
           <input type="text" name="email" style="width: 100%; margin-right: 10px;"
           class="form-control" id="email">
+          @error('email') <p class="alert mt-2">{{ $message }}</p> @enderror
           <table>
             <tr>
               <th>
@@ -208,10 +216,12 @@
               <td>
                 <input type="text" name="contact1" style="width: 100%; margin-right: 10px;"
                 class="form-control" id="contact1">
+                @error('contact1') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" name="contact2" style="width: 100%; margin-right: 10px;"
                 class="form-control" id="contact2">
+                @error('contact2') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
             </tr>
           </table>
@@ -227,6 +237,7 @@
           </label>
           <input type="text" name="examname" style="width: 100%; margin-right: 10px;"
           class="form-control" id="examname">
+          @error('examname') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label for="board" class="form-label" style="width: 100%; margin-right: 10px;">
             <b>
               Board /University
@@ -237,6 +248,7 @@
           </label>
           <input type="text" name="board" style="width: 100%; margin-right: 10px;"
           class="form-control" id="board">
+          @error('board') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label for="register12" class="form-label" style="width: 100%; margin-right: 10px;">
             <b>
               Register No 12th
@@ -247,6 +259,7 @@
           </label>
           <input type="text" name="register12" style="width: 100%; margin-right: 10px;"
           class="form-control" id="register12">
+          @error('register of 12th') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <div class="mb-3">
           <label for="yearof12" class="form-label" style="width: 100%; margin-right: 10px;">
@@ -259,6 +272,7 @@
           </label>
           <input type="text" name="yearof12" style="width: 100%; margin-right: 10px;"
           class="form-control" id="yearof12">
+          @error('year of 12th') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label for="instname" class="form-label" style="width: 100%; margin-right: 10px;">
             <b>
               Name of Institution
@@ -269,6 +283,7 @@
           </label>
           <input type="text" name="instname" style="width: 100%; margin-right: 10px;"
           class="form-control" id="instname">
+          @error('institute name') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label for="state" class="form-label" style="width: 100%; margin-right: 10px;">
             <b>
               State
@@ -279,6 +294,7 @@
           </label>
           <input type="text" name="state" style="width: 100%; margin-right: 10px;"
           class="form-control" id="state">
+          @error('state') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <table>
           <thead>
@@ -318,14 +334,17 @@
               <td>
                 <input type="text" id="p" style="width: 100%; margin-right: 10px;" name="p"
                 class="form-control">
+                @error('physics') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="pmax" style="width: 100%; margin-right: 10px;"
                 name="pmax" class="form-control">
+                @error('max') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="phyperc" style="width: 100%; margin-right: 10px;"
                 name="phyperc" class="form-control">
+                @error('percentage') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
             </tr>
             <tr>
@@ -340,14 +359,17 @@
               <td>
                 <input type="text" id="c" style="width: 100%; margin-right: 10px;" name="c"
                 class="form-control">
+                @error('chemistry') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="cmax" style="width: 100%; margin-right: 10px;"
                 name="cmax" class="form-control">
+                @error('max') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="chemperc" style="width: 100%; margin-right: 10px;"
                 name="chemperc" class="form-control">
+                @error('percentage') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
             </tr>
             <tr>
@@ -362,14 +384,17 @@
               <td>
                 <input type="text" id="b" style="width: 100%; margin-right: 10px;" name="b"
                 class="form-control">
+                @error('biology') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="bmax" style="width: 100%; margin-right: 10px;"
                 name="bmax" class="form-control">
+                @error('max') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="bioperc" style="width: 100%; margin-right: 10px;"
                 name="bioperc" class="form-control">
+                @error('percentage') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
             </tr>
             <tr>
@@ -384,14 +409,17 @@
               <td>
                 <input type="text" id="e" style="width: 100%; margin-right: 10px;" name="e"
                 class="form-control">
+                @error('english') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="emax" style="width: 100%; margin-right: 10px;"
                 name="emax" class="form-control">
+                @error('max') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="engperc" style="width: 100%; margin-right: 10px;"
                 name="engperc" class="form-control">
+                @error('percentage') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
             </tr>
             <tr>
@@ -408,14 +436,17 @@
               <td>
                 <input type="text" id="total" style="width: 100%; margin-right: 10px;"
                 name="total" class="form-control">
+                @error('total') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="maxtotal" style="width: 100%; margin-right: 10px;"
                 name="maxtotal" class="form-control">
+                @error('max') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="totalperc" style="width: 100%; margin-right: 10px;"
                 name="totalperc" class="form-control">
+                @error('percentage') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
             </tr>
             <tr>
@@ -437,14 +468,17 @@
               <td>
                 <input type="text" id="grand" style="width: 100%; margin-right: 10px;"
                 name="grand" class="form-control">
+                @error('grand') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="grandmax" style="width: 100%; margin-right: 10px;"
                 name="grandmax" class="form-control">
+                @error('max') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
               <td>
                 <input type="text" id="grandperc" style="width: 100%; margin-right: 10px;"
                 name="grandperc" class="form-control">
+                @error('percentage') <p class="alert mt-2">{{ $message }}</p> @enderror
               </td>
             </tr>
           </tbody>
@@ -458,6 +492,7 @@
           </label>
           <input type="file" class="custom-file-input" id="image" style="width: 100%; margin-right: 10px;"
           name="image">
+          @error('image') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label class="custom-file-label" for="customFile" style="width: 100%; margin-right: 10px;">
             Date of Birth in Christian Era
             <sup style="color: red">
@@ -466,6 +501,7 @@
           </label>
           <input type="file" class="custom-file-input" style="width: 100%; margin-right: 10px;"
           id="dobpdf" name="dobpdf">
+          @error('proof of dob') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label class="custom-file-label" for="customFile" style="width: 100%; margin-right: 10px;">
             Permanent Address
             <sup style="color: red">
@@ -474,6 +510,7 @@
           </label>
           <input type="file" class="custom-file-input" style="width: 100%; margin-right: 10px;"
           id="addresspdf" name="addresspdf">
+          @error('addressproof') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <div class="custom-file">
           <label class="custom-file-label" for="customFile" style="width: 100%; margin-right: 10px;">
@@ -484,6 +521,7 @@
           </label>
           <input type="file" class="custom-file-input" style="width: 100%; margin-right: 10px;"
           id="exampdf" name="exampdf">
+          @error('examdetail') <p class="alert mt-2">{{ $message }}</p> @enderror
           <label class="custom-file-label" for="customFile" style="width: 100%; margin-right: 10px;">
             Remittance of application fee of Rs 800/-
             <sup style="color: red">
@@ -492,6 +530,7 @@
           </label>
           <input type="file" class="custom-file-input" style="width: 100%; margin-right: 10px;"
           id="fee" name="fee">
+          @error('fee remittance') <p class="alert mt-2">{{ $message }}</p> @enderror
         </div>
         <div>
           <input type="hidden" name="applicant_id" />
