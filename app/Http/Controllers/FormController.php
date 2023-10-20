@@ -21,8 +21,8 @@ class FormController extends Controller
             'comaddress'=>'required',
             'permaddress'=>'required',
             'email'=>'required | unique:users,email',
-            'contact1'=>'required',
-            'contact2'=>'required',
+            'contact1'=>'required | min:10',
+            'contact2'=>'required | min:10',
             'examname'=>'required',
             'board'=>'required',
             'register12'=>'required',
@@ -127,7 +127,7 @@ class FormController extends Controller
             request('fee')->storeAs('public/feedoc', $feefilename);
         }
         
-        $user=User::create([
+        $user = User::create([
             'name' => $name,
             'gender' => $gender,
             'dob' => $dob,
