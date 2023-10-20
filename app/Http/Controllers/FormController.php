@@ -32,8 +32,8 @@ class FormController extends Controller
             'image' => 'required|image|mimes:png,jpg,jpeg |max:2048', 
             'dobpdf' => 'required|mimes:pdf|max:3072', 
             'addresspdf' => 'required|mimes:pdf|max:3072', 
-            // 'exampdf' => 'required|mimes:pdf|max:3072', 
-            // 'fee' => 'required|mimes:pdf|max:3072', 
+            'exampdf' => 'required|mimes:pdf|max:3072', 
+            'fee' => 'required|mimes:pdf|max:3072', 
             'p' => 'required|string',
             'pmax' => 'required|string',
             'phyperc' => 'required|string',
@@ -127,7 +127,7 @@ class FormController extends Controller
             request('fee')->storeAs('public/feedoc', $feefilename);
         }
         
-        User::create([
+        $user=User::create([
             'name' => $name,
             'gender' => $gender,
             'dob' => $dob,
@@ -151,8 +151,8 @@ class FormController extends Controller
             'exampdf' => $examfilename,
             'fee' => $feefilename,
         ]);
-        $userIds = User::pluck('id'); // Get an array of user IDs
-        $userId = $userIds[0];
+        
+        // $userId = session('id');
         Mark::create([
             'p' => $p,
             'pmax' => $pmax,
@@ -172,11 +172,11 @@ class FormController extends Controller
             'grand' => $grand,
             'grandmax' => $grandmax,
             'grandperc' => $grandPercentage,
-            'applicant_id'=> $userId,
+            'applicant_id'=> $user->id,
         ]);    
         $users = User::all();
         $marks = Mark::all();
-        return view('dashboard', compact('users', 'marks'));
+        return view('dashboard', compact('users', 'marks','user'));
         // return redirect()->route('dashboard')->with('message', 'Applicant Details Added Successfully');
     
     }
@@ -184,6 +184,7 @@ class FormController extends Controller
     {
         $users=User::find($id);
         $marks=Mark::where('applicant_id',$users->id)->first();
+        
         return view('details',compact('marks','users'));
     }
     

@@ -66,8 +66,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach(session('users') as $user)
+                    @php
+                    $counter = 1;
+                    @endphp
+                    @foreach($users as $user)
                     <tr>
+                        @php
+                        $counter++
+                        @endphp
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->gender }}</td>
                         <td>{{ $user->dob }}</td>
