@@ -87,3 +87,9 @@
     </div>
 </body>
 </html>
+<script>
+    const resultbtn = document.querySelector('.alert');
+    setTimeout(() => {
+        resultbtn.parentNode.removeChild(resultbtn);
+    }, 2000);
+</script>
