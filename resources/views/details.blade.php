@@ -132,11 +132,7 @@
           <b>
             Email address of the applicant
           </b>
-          (
-          <span style="font-family: Arial, sans-serif; font-style: italic;">
-            in block letters
-          </span>
-          )
+
         </label>
         <input readonly type="text" name="email" style="width: 100%; margin-right: 10px;"
         class="form-control" value='{{$users->email}}' id="email">
@@ -332,7 +328,7 @@
                 </b>
                 (
                 <span style="font-family: Arial, sans-serif; font-style: italic;">
-                  in block letters
+                  2nd year marks
                 </span>
                 )
               </label>

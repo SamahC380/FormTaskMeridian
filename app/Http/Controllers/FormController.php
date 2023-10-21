@@ -13,7 +13,7 @@ class FormController extends Controller
     {
 
         request()->validate([
-            'name'=>'required | min:3',
+            'name'=>'required | min:3 |regex:/^[A-Z ]+$/',
             'gender'=>'required',
             'dob'=>'required',
             'nationality'=>'required',
