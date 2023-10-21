@@ -86,7 +86,7 @@
         </label>
         <div>
           <input name="nationality" id="gender" style="width: 100%; margin-right: 10px;"
-          value='{{$users->nationality}}'>
+          value='{{$users->nationality}}' readonly>
         </div>
         <label for="guardian" class="form-label" style="width: 100%; margin-right: 10px;">
           <b>
